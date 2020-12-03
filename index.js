@@ -28,11 +28,16 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-  
+      In counter1, returns count++ using its function scope.
+      In counter 2, returns count++ using global scope.
   2. Which of the two uses a closure? How can you tell?
+
+  Both since the variable count are accessible.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better? 
+     Counter1 would be better if you needed multiple count variables with different values. Each count would be unique to its function scope.
+     Count2 would be better if the count variable needed to be accessible to many different functions since it would be globally accessible.
 */
 
 // counter1 code
@@ -62,8 +67,9 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+  let score = Math.floor((Math.random() * 3));
+    return score;
 }
 
 
@@ -81,7 +87,7 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inning, 9){
   /*Code Here*/
 }
 
